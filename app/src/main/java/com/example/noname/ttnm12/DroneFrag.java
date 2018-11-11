@@ -4,9 +4,11 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -26,6 +28,7 @@ public class DroneFrag extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private Button btn_Supervise;
 
     private OnFragmentInteractionListener mListener;
 
@@ -64,7 +67,19 @@ public class DroneFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_drone, container, false);
+        View view =  inflater.inflate(R.layout.fragment_drone, container, false);
+        btn_Supervise = view.findViewById(R.id.button_supervise_drone);
+        btn_Supervise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new SuperviseFrag();
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, fragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

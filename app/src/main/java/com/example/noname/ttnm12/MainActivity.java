@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements MapFrag.OnFragmen
     };
 
 
-    private void loadFragment(Fragment fragment) {
+    public void loadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.container, fragment);
         transaction.addToBackStack(null);
