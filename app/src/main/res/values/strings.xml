@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TTNM12</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="map_api_key">AIzaSyCd8_sp1d0I36Mu5-QM73d-vGP-ojsbK6o</string>
+</resources>
