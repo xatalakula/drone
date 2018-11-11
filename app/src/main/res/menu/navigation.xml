@@ -19,4 +19,9 @@
         android:id="@+id/navigation_general"
         android:icon="@drawable/ic_person"
         android:title="General"/>
+
+    <item
+        android:id="@+id/navigation_report"
+        android:icon="@drawable/ic_upload"
+        android:title="General"/>
 </menu>

@@ -54,6 +54,11 @@ public class MainActivity extends AppCompatActivity implements MapFrag.OnFragmen
                     fragment = new GeneralFrag();
                     loadFragment(fragment);
                     return true;
+
+                case R.id.navigation_report:
+                    fragment = new ReportFrag();
+                    loadFragment(fragment);
+                    return true;
             }
             return false;
         }
