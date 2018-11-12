@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="8"
+    android:layout_marginTop="?attr/actionBarSize"
+    tools:context=".InfoDroneFrag">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:src="@drawable/ic_drone"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <TextView
+        android:text="Mã drone : drone_ggwp_01"
+        android:textColor="#111"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="Tần số : 2,4 GHz"
+        android:textColor="#111"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="Cường độ tín hiệu: "
+        android:textColor="#111"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="Lượng pin còn lại : 90%"
+        android:textColor="#111"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

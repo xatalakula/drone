@@ -3,9 +3,12 @@ package com.example.noname.ttnm12;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -30,8 +33,15 @@ public class SuperviseFrag extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_supervise, container, false);
         listView = view.findViewById(R.id.listview_drone_connected);
-        List<String> listId = getListData();
-        listView.setAdapter(new CustomListAdapter(listId,this.getActivity()));
+        List<State> listDrone = getListData();
+        listView.setAdapter(new CustomListAdapter(listDrone,this.getActivity()));
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Fragment fragment = new DetailDroneFrag();
+                loadFragMent(fragment);
+            }
+        });
         return view;
     }
 
@@ -41,17 +51,27 @@ public class SuperviseFrag extends Fragment {
 
     }
 
-    private List<String> getListData() {
-        List<String> list = new ArrayList<>();
+    private List<State> getListData() {
+        List<State> list = new ArrayList<>();
 
 
-        list.add("drone_ggwp_01");
-        list.add("drone_ggwp_02");
-        list.add("drone_ggwp_03");
-        list.add("drone_ggwp_04");
-        list.add("drone_ggwp_05");
+        list.add(new State("drone_ggwp_01",R.drawable.ic_state_on));
+        list.add(new State("drone_ggwp_02",R.drawable.ic_state_on));
+        list.add(new State("drone_ggwp_03",R.drawable.ic_state_on));
+        list.add(new State("drone_ggwp_04",R.drawable.ic_state_on));
+        list.add(new State("drone_ggwp_05",R.drawable.ic_state_off));
+        list.add(new State("drone_ggwp_06",R.drawable.ic_state_on));
+        list.add(new State("drone_ggwp_07",R.drawable.ic_state_on));
+        list.add(new State("drone_ggwp_08",R.drawable.ic_state_off));
 
         return list;
+    }
+
+    private void loadFragMent(Fragment fragment) {
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
 }
