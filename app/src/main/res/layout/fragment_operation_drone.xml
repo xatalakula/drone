@@ -1,15 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="?attr/actionBarSize"
     tools:context=".OperationDroneFrag">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:weightSum="10"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@drawable/ic_map_satellite"
+            android:scaleType="fitXY"
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+        <LinearLayout
+            android:weightSum="7"
+            android:orientation="vertical"
+            android:layout_weight="6"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <TextView
+                android:text="Kinh do: 100"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Vi do: 100"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_weight="3"
+                android:weightSum="10"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:text="Quy dao bay :"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:src="@drawable/ic_map"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="80dp"
+                    android:layout_weight="7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:text="Thoi gian bat dau: "
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Du kien ket thuc: "
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_weight="2"
+                android:layout_marginTop="10dp"
+                android:weightSum="10"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <Button
+                    android:text="Dieu khien"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:text="Xem video"
+                    android:layout_weight="4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>

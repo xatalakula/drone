@@ -34,14 +34,13 @@ public class SuperviseFrag extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_supervise, container, false);
         listView = view.findViewById(R.id.listview_drone_connected);
         List<State> listDrone = getListData();
-        listView.setAdapter(new CustomListAdapter(listDrone,this.getActivity()));
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Fragment fragment = new DetailDroneFrag();
-                loadFragMent(fragment);
-            }
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) { Fragment fragment = new DetailDroneFrag();
+                loadFragMent(fragment); }
         });
+        listView.setAdapter(new CustomListAdapter(listDrone,this.getActivity()));
+
         return view;
     }
 
