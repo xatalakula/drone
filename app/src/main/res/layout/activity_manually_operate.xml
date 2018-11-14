@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManuallyOperateActivity">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:weightSum="6"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_weight="4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+            </LinearLayout>
+            <io.github.controlwear.virtual.joystick.android.JoystickView
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/joystickleft"
+                android:layout_width="match_parent"
+                android:background="@drawable/ic_circle128_control"
+                custom:JV_buttonImage="@drawable/ic_circle64_control"
+                custom:JV_fixedCenter="true"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:weightSum="6"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_weight="4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+            </LinearLayout>
+            <io.github.controlwear.virtual.joystick.android.JoystickView
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/joystickright"
+                android:layout_width="match_parent"
+                android:background="@drawable/ic_circle128_control"
+                custom:JV_buttonImage="@drawable/ic_circle64_control"
+                custom:JV_fixedCenter="true"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

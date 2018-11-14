@@ -76,6 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
                 <Button
+                    android:id="@+id/btn_control"
                     android:text="Dieu khien"
                     android:layout_marginRight="30dp"
                     android:layout_weight="4"
