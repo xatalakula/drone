@@ -1,27 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".GeneralFrag">
 
     <!-- TODO: Update blank fragment layout -->
+
+
     <LinearLayout
-        android:weightSum="2"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
         <Button
-            android:layout_weight="1"
-            android:text="Thông tin cá nhân"
+            android:id="@+id/btn_info"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Thông tin cá nhân" />
+
+
         <Button
-            android:layout_weight="1"
-            android:text="Lịch làm việc"
+            android:id="@+id/btn_schedule"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lịch làm việc" />
     </LinearLayout>
-    
+    <FrameLayout
+        android:id="@+id/container_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
 </LinearLayout>

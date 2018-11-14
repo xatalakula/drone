@@ -77,9 +77,9 @@ public class MapFrag extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_map, container, false);
-        MapsInitializer.initialize(this.getActivity());
-        mMapView = (MapView) view.findViewById(R.id.mapView);
-        mMapView.onCreate(savedInstanceState);
+//        MapsInitializer.initialize(this.getActivity());
+//        mMapView = (MapView) view.findViewById(R.id.mapView);
+//        mMapView.onCreate(savedInstanceState);
         return view;
     }
 
