@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
+            android:background="#111"
             android:orientation="vertical"
             android:weightSum="6"
             android:layout_weight="1"
@@ -26,16 +27,68 @@
                 xmlns:custom="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/joystickleft"
                 android:layout_width="match_parent"
+                custom:JV_buttonSizeRatio="40%"
                 android:background="@drawable/ic_circle128_control"
                 custom:JV_buttonImage="@drawable/ic_circle64_control"
                 custom:JV_fixedCenter="true"
                 android:layout_height="match_parent"/>
         </LinearLayout>
-        <ImageView
+        <LinearLayout
+            android:orientation="vertical"
+            android:weightSum="2"
             android:layout_weight="2"
             android:layout_width="0dp"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+            <LinearLayout
+                android:layout_weight="0.25"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"></LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:weightSum="2"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
+            android:background="#111"
             android:orientation="vertical"
             android:weightSum="6"
             android:layout_weight="1"
@@ -52,6 +105,7 @@
                 android:layout_width="match_parent"
                 android:background="@drawable/ic_circle128_control"
                 custom:JV_buttonImage="@drawable/ic_circle64_control"
+                custom:JV_buttonSizeRatio="40%"
                 custom:JV_fixedCenter="true"
                 android:layout_height="match_parent" />
         </LinearLayout>
