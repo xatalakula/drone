@@ -6,20 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".ManuallyOperateActivity">
     <LinearLayout
+        android:background="#f1f1f1"
         android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="4"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
-            android:background="#111"
             android:orientation="vertical"
             android:weightSum="6"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent">
             <LinearLayout
-                android:layout_weight="4"
+                android:layout_weight="4.5"
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
             </LinearLayout>
@@ -39,65 +39,160 @@
             android:layout_weight="2"
             android:layout_width="0dp"
             android:layout_height="match_parent">
-            <ImageView
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/custom_border"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="0dp" />
+                android:layout_height="0dp">
+                <ImageView
+                    android:layout_margin="5dp"
+                    android:background="#6e5d5d"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
             <LinearLayout
-                android:layout_weight="0.25"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"></LinearLayout>
-            <LinearLayout
+                android:layout_marginTop="10dp"
                 android:orientation="vertical"
-                android:weightSum="2"
-                android:layout_weight="0.5"
+                android:weightSum="4"
+                android:layout_weight="0.8"
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
                 <LinearLayout
-                    android:orientation="horizontal"
-                    android:gravity="center"
-                    android:layout_weight="1"
+                    android:weightSum="2.3"
+                    android:orientation="vertical"
+                    android:layout_weight="3"
                     android:layout_width="match_parent"
                     android:layout_height="0dp">
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:layout_marginRight="30dp"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/ic_sun_blackwhite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <Button
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@drawable/custom_button"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@drawable/custom_button"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/ic_photo_camera"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="0.3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"></LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:layout_marginRight="30dp"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/ic_compass"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <Button
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@drawable/custom_button"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="30dp"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:gravity="center_vertical|center_horizontal"
+                                android:background="@drawable/custom_button"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/ic_video_camera"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
+                    android:layout_marginTop="20dp"
                     android:orientation="horizontal"
                     android:gravity="center"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="0dp">
                     <Button
-                        android:layout_width="wrap_content"
+                        android:layout_marginRight="90dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:background="@drawable/custom_button"
+                        android:layout_width="30dp"
                         android:layout_height="wrap_content" />
                     <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <Button
-                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="90dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:background="@drawable/custom_button"
+                        android:layout_width="30dp"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
-            android:background="#111"
             android:orientation="vertical"
             android:weightSum="6"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent">
             <LinearLayout
-                android:layout_weight="4"
+                android:gravity="right"
+                android:layout_weight="4.5"
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
+                <Button
+                    android:layout_marginRight="10dp"
+                    android:text="exit"
+                    android:textSize="10dp"
+                    android:background="@drawable/custom_button_exit"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp" />
             </LinearLayout>
             <io.github.controlwear.virtual.joystick.android.JoystickView
                 xmlns:custom="http://schemas.android.com/apk/res-auto"
