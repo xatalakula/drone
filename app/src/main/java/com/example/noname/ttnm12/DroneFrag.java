@@ -29,6 +29,7 @@ public class DroneFrag extends Fragment {
     private String mParam1;
     private String mParam2;
     private Button btn_Supervise;
+    private Button button_connect_drone;
 
     private OnFragmentInteractionListener mListener;
 
@@ -68,6 +69,8 @@ public class DroneFrag extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_drone, container, false);
+
+        // theo dõi drone
         btn_Supervise = view.findViewById(R.id.button_supervise_drone);
         btn_Supervise.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +82,21 @@ public class DroneFrag extends Fragment {
                 transaction.commit();
             }
         });
+
+        // kết nối drone
+        button_connect_drone = view.findViewById(R.id.button_connect_drone);
+        button_connect_drone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new ConnectionDroneFrag();
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, fragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
+
+
         return view;
     }
 

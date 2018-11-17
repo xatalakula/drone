@@ -48,6 +48,8 @@ public class GeneralFrag extends Fragment {
                 loadFragment(fragment);
             }
         });
+
+        loadFragment(new InfoUserFrag());
         return view;
     }
 
