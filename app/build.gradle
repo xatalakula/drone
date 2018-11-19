@@ -31,5 +31,5 @@ dependencies {
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.2'
     implementation 'com.google.android.gms:play-services-maps:16.0.0'
     implementation 'io.github.controlwear:virtualjoystick:1.9.2'
-    implementation  'com.github.imaNNeoFighT:StepBarView:1.0.5'
+    implementation 'com.github.imaNNeoFighT:StepBarView:1.0.5'
 }

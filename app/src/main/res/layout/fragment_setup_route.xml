@@ -8,24 +8,50 @@
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
+        android:weightSum="8"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginBottom="40dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
         <ir.neo.stepbarview.StepBarView
             android:id="@+id/stepbar"
             app:sbv_steps_text_color="#111"
             app:sbv_steps_text_size="25dp"
             app:sbv_max_count="3"
-            app:sbv_steps_size="50dp"
+            app:sbv_steps_size="45dp"
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="0dp" />
         <FrameLayout
+            android:layout_weight="6.3"
+            android:layout_marginTop="20dp"
             android:id="@+id/container_setup"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="0dp">
+        </FrameLayout>
+        <FrameLayout
+            android:layout_marginTop="30dp"
+            android:layout_weight="0.7"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <Button
+                android:id="@+id/btn_back_setup"
+                android:layout_gravity="left"
+                android:background="#7bff47"
+                android:text="tro ve"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+            <Button
+                android:id="@+id/btn_next_setup"
+                android:layout_gravity="right"
+                android:background="#7bff47"
+                android:text="tiep tuc"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
         </FrameLayout>
     </LinearLayout>
 

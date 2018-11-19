@@ -30,6 +30,7 @@ public class DroneFrag extends Fragment {
     private String mParam2;
     private Button btn_Supervise;
     private Button button_connect_drone;
+    private Button button_setup_route;
 
     private OnFragmentInteractionListener mListener;
 
@@ -76,10 +77,7 @@ public class DroneFrag extends Fragment {
             @Override
             public void onClick(View v) {
                 Fragment fragment = new SuperviseFrag();
-                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.container, fragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
+                loadFragMent(fragment);
             }
         });
 
@@ -89,10 +87,16 @@ public class DroneFrag extends Fragment {
             @Override
             public void onClick(View v) {
                 Fragment fragment = new ConnectionDroneFrag();
-                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.container, fragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
+                loadFragMent(fragment);
+            }
+        });
+
+        button_setup_route = view.findViewById(R.id.button_setup_route);
+        button_setup_route.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new SetupRouteFrag();
+                loadFragMent(fragment);
             }
         });
 
@@ -137,5 +141,12 @@ public class DroneFrag extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    private void loadFragMent(Fragment fragment) {
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }

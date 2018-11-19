@@ -39,7 +39,7 @@ public class SuperviseFrag extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) { Fragment fragment = new DetailDroneFrag();
                 loadFragMent(fragment); }
         });
-        listView.setAdapter(new CustomListAdapter(listDrone,this.getActivity()));
+        listView.setAdapter(new CustomListAdapter(listDrone,this.getActivity(),0));
 
         return view;
     }

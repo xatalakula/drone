@@ -15,11 +15,13 @@ public class CustomListAdapter extends BaseAdapter{
     private List<State> listDrone;
     private LayoutInflater layoutInflater;
     private Context context;
+    private int option = 0;
 
-    public CustomListAdapter(List<State> listDrone, Context context) {
+    public CustomListAdapter(List<State> listDrone, Context context,int option) {
         this.listDrone = listDrone;
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
+        this.option = option;
     }
 
     @Override
@@ -41,7 +43,12 @@ public class CustomListAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
-            convertView = layoutInflater.inflate(R.layout.custom_list_layout, null);
+            if(option == 1) {
+                convertView = layoutInflater.inflate(R.layout.custom_list_layout2, null);
+            }
+            else {
+                convertView = layoutInflater.inflate(R.layout.custom_list_layout, null);
+            }
             holder = new ViewHolder();
             holder.textViewId = (TextView) convertView.findViewById(R.id.drone_id);
             holder.imageViewState = (ImageView) convertView.findViewById(R.id.drone_state);
