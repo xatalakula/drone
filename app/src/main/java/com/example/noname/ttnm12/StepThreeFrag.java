@@ -1,17 +1,25 @@
 package com.example.noname.ttnm12;
 
 
+import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 
@@ -21,8 +29,12 @@ import java.util.Locale;
 public class StepThreeFrag extends Fragment {
 
     Calendar cal;
-
     TextView tvTimeStart,tvTimeEnd;
+    ImageView imageRouteSelected;
+    ListView listRoute;
+    Button btnSelectRoute;
+    private int idRouteSelected;
+
     public StepThreeFrag() {
         // Required empty public constructor
     }
@@ -33,6 +45,13 @@ public class StepThreeFrag extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_step_three, container, false);
+        this.imageRouteSelected = (ImageView) view.findViewById(R.id.imgv_route_selected);
+        imageRouteSelected.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDialogRoute();
+            }
+        });
         tvTimeStart = (TextView) view.findViewById(R.id.textview_timestart);
         cal = Calendar.getInstance();
         setTime(tvTimeStart,0);
@@ -80,6 +99,51 @@ public class StepThreeFrag extends Fragment {
         TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(),callBack,hour,min,true);
         timePickerDialog.setTitle("Chọn giờ khởi động");
         timePickerDialog.show();
+    }
+
+    private void openDialogRoute() {
+        final Dialog dialog = new Dialog(getActivity());
+        dialog.setContentView(R.layout.custom_dialog_route);
+        listRoute = dialog.findViewById(R.id.listview_route);
+        listRoute.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                idRouteSelected = position;
+            }
+        });
+        btnSelectRoute = (Button) dialog.findViewById(R.id.button_select_route);
+        btnSelectRoute.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.hide();
+                changeRoute();
+            }
+        });
+        CustomRouteAdapter customRouteAdapter = new CustomRouteAdapter(getListRoute(),getActivity());
+        listRoute.setAdapter(customRouteAdapter);
+        dialog.show();
+
+    }
+
+    private List<Integer> getListRoute() {
+        List<Integer> listRoute = new ArrayList<>();
+        listRoute.add(R.drawable.ic_route_1);
+        listRoute.add(R.drawable.ic_route_2);
+        listRoute.add(R.drawable.ic_map);
+        return listRoute;
+    }
+
+    private void changeRoute(){
+        Log.e("idroute", "changeRoute: " + idRouteSelected);
+        if(idRouteSelected == 0 ){
+            imageRouteSelected.setImageResource(R.drawable.ic_route_1);
+        }
+        else if(idRouteSelected == 1) {
+            imageRouteSelected.setImageResource(R.drawable.ic_route_2);
+        }
+        else {
+            imageRouteSelected.setImageResource(R.drawable.ic_map);
+        }
     }
 
 }

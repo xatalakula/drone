@@ -59,7 +59,7 @@ public class DetailDroneFrag extends Fragment {
 
 
     public void loadFragment(Fragment fragment) {
-        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.replace(R.id.container_detail, fragment);
         transaction.addToBackStack(null);
         transaction.commit();

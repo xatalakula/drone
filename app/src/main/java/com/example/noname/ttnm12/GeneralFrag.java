@@ -54,8 +54,8 @@ public class GeneralFrag extends Fragment {
     }
 
     public void loadFragment(Fragment fragment) {
-        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container_detail, fragment);
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        transaction.replace(R.id.container_general, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
     }

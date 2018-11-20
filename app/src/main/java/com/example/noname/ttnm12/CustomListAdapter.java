@@ -60,7 +60,7 @@ public class CustomListAdapter extends BaseAdapter{
         String id = this.listDrone.get(position).getDrone_Id();
         holder.textViewId.setText(id);
         holder.imageViewState.setImageResource(listDrone.get(position).getState());
-            return convertView;
+        return convertView;
     }
 
     class ViewHolder {
