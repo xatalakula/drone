@@ -4,10 +4,13 @@ package com.example.noname.ttnm12;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -20,6 +23,8 @@ import java.util.List;
 public class StepOneFrag extends Fragment {
 
     ListView listDroneConnect;
+    EditText textSearch;
+    static CustomListAdapter customListAdapter;
     public StepOneFrag() {
         // Required empty public constructor
     }
@@ -32,13 +37,31 @@ public class StepOneFrag extends Fragment {
         View view = inflater.inflate(R.layout.fragment_step_one, container, false);
         listDroneConnect = (ListView) view.findViewById(R.id.listview_drone_select);
         List<State> listDrone = getListData();
+        customListAdapter = new CustomListAdapter(listDrone,this.getActivity(),1);
         listDroneConnect.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
             }
         });
-        listDroneConnect.setAdapter(new CustomListAdapter(listDrone,this.getActivity(),1));
+        listDroneConnect.setAdapter(customListAdapter);
+        textSearch = (EditText) view.findViewById(R.id.text_search_step_one);
+        textSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                StepOneFrag.customListAdapter.getFilter().filter(s);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
         return view;
     }
 

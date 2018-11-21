@@ -5,10 +5,13 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -20,7 +23,9 @@ import java.util.List;
  */
 public class SuperviseFrag extends Fragment {
 
-        private ListView listView;
+    private ListView listView;
+    private EditText textSearch;
+    static CustomListAdapter customListAdapter;
 
     public SuperviseFrag() {
         // Required empty public constructor
@@ -39,8 +44,25 @@ public class SuperviseFrag extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) { Fragment fragment = new DetailDroneFrag();
                 loadFragMent(fragment); }
         });
-        listView.setAdapter(new CustomListAdapter(listDrone,this.getActivity(),0));
+        customListAdapter = new CustomListAdapter(listDrone,this.getActivity(),0);
+        listView.setAdapter(customListAdapter);
+        textSearch = (EditText) view.findViewById(R.id.text_search_supervise);
+        textSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                SuperviseFrag.customListAdapter.getFilter().filter(s);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
         return view;
     }
 

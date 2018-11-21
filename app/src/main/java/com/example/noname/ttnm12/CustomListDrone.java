@@ -93,7 +93,7 @@ public class CustomListDrone extends BaseAdapter implements Filterable {
 
                 results.count = FilteredDrones.size();
                 results.values = FilteredDrones;
-                Log.e("VALUES", results.values.toString());
+                //Log.e("VALUES", results.values.toString());
 
                 return results;
             }
