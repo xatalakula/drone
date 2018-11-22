@@ -1,5 +1,6 @@
 package com.example.noname.ttnm12;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -13,7 +14,7 @@ import android.view.MenuItem;
 
 
 
-public class MainActivity extends AppCompatActivity implements MapFrag.OnFragmentInteractionListener,
+public class MainActivity extends AppCompatActivity implements
         DashBoardFrag.OnFragmentInteractionListener,DroneFrag.OnFragmentInteractionListener,
         GeneralFrag.OnFragmentInteractionListener {
 
@@ -46,8 +47,8 @@ public class MainActivity extends AppCompatActivity implements MapFrag.OnFragmen
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_map:
-                    fragment = new MapFrag();
-                    loadFragment(fragment);
+                    Intent intent = new Intent(getApplicationContext(),MapActivity.class);
+                    startActivity(intent);
                     return true;
                 case R.id.navigation_general:
                     fragment = new GeneralFrag();
