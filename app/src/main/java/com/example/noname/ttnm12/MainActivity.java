@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +30,13 @@ public class MainActivity extends AppCompatActivity implements
         toolbar = getSupportActionBar();
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigationView);
         navigation.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
-        loadFragment(new DashBoardFrag());
+        Intent intent1 = getIntent();
+        if(intent1 != null && intent1.getBooleanExtra("detail",false)) {
+            navigation.setSelectedItemId(R.id.navigation_drone);
+            loadFragment(new DetailDroneFrag());
+        }else {
+            navigation.setSelectedItemId(R.id.navigation_dashboard);
+        }
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener
