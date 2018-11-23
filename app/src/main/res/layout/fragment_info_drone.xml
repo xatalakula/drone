@@ -10,7 +10,7 @@
 
     <!-- TODO: Update blank fragment layout -->
     <ImageView
-        android:src="@drawable/ic_drone"
+        android:src="@drawable/ic_drone_info"
         android:paddingLeft="100dp"
         android:paddingRight="100dp"
         android:layout_weight="4"
