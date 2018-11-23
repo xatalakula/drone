@@ -6,11 +6,131 @@
     tools:context=".StepTwoFrag">
 
     <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:id="@+id/imgv_map_setup"
-        android:src="@drawable/ic_map_satellite"
-        android:scaleType="fitXY"
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:weightSum="3"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <ImageButton
+                android:id="@+id/img_btn_1"
+                android:background="@drawable/custom_image_choice"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_map1"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageButton
+                android:id="@+id/img_btn_2"
+                android:background="@drawable/custom_image_choice"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_map2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageButton
+                android:id="@+id/img_btn_3"
+                android:background="@drawable/custom_image_choice"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_map3"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:weightSum="3"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <ImageButton
+                android:id="@+id/img_btn_4"
+                android:background="@drawable/custom_image_choice"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_map4"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageButton
+                android:id="@+id/img_btn_5"
+                android:background="@drawable/custom_image_choice"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_map5"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageButton
+                android:id="@+id/img_btn_6"
+                android:background="@drawable/custom_image_choice"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_map6"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:weightSum="3"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <ImageButton
+                android:id="@+id/img_btn_7"
+                android:background="@drawable/custom_image_choice"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_map7"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageButton
+                android:id="@+id/img_btn_8"
+                android:background="@drawable/custom_image_choice"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_map8"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageButton
+                android:id="@+id/img_btn_9"
+                android:background="@drawable/custom_image_choice"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_map9"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:weightSum="3"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <ImageButton
+                android:id="@+id/img_btn_10"
+                android:background="@drawable/custom_image_choice"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_map10"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageButton
+                android:id="@+id/img_btn_11"
+                android:background="@drawable/custom_image_choice"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_map11"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageButton
+                android:id="@+id/img_btn_12"
+                android:background="@drawable/custom_image_choice"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_map12"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>

@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ImageView
-            android:src="@drawable/ic_map_satellite"
+            android:src="@drawable/ic_map_satellite2"
             android:scaleType="fitXY"
             android:layout_weight="4"
             android:layout_width="match_parent"
