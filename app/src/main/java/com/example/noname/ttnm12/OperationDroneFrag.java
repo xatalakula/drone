@@ -14,7 +14,7 @@ import android.widget.Button;
  * A simple {@link Fragment} subclass.
  */
 public class OperationDroneFrag extends Fragment {
-    Button btnControl;
+    Button btnControl,btnWatchVideo;
 
     public OperationDroneFrag() {
         // Required empty public constructor
@@ -31,6 +31,14 @@ public class OperationDroneFrag extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),ManuallyOperateActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnWatchVideo = (Button) view.findViewById(R.id.btn_watch_video);
+        btnWatchVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),VideoActivity.class);
                 startActivity(intent);
             }
         });
