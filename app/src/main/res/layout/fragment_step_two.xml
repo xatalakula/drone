@@ -18,7 +18,7 @@
             android:layout_height="0dp">
             <ImageButton
                 android:id="@+id/img_btn_1"
-                android:background="@drawable/custom_image_choice"
+                android:background="@drawable/custom_image_choice2"
                 android:scaleType="fitXY"
                 android:src="@drawable/image_map1"
                 android:layout_weight="1"
@@ -26,7 +26,7 @@
                 android:layout_height="match_parent" />
             <ImageButton
                 android:id="@+id/img_btn_2"
-                android:background="@drawable/custom_image_choice"
+                android:background="@drawable/custom_image_choice2"
                 android:scaleType="fitXY"
                 android:src="@drawable/image_map2"
                 android:layout_weight="1"
@@ -34,7 +34,7 @@
                 android:layout_height="match_parent" />
             <ImageButton
                 android:id="@+id/img_btn_3"
-                android:background="@drawable/custom_image_choice"
+                android:background="@drawable/custom_image_choice2"
                 android:scaleType="fitXY"
                 android:src="@drawable/image_map3"
                 android:layout_weight="1"
@@ -48,7 +48,7 @@
             android:layout_height="0dp">
             <ImageButton
                 android:id="@+id/img_btn_4"
-                android:background="@drawable/custom_image_choice"
+                android:background="@drawable/custom_image_choice2"
                 android:scaleType="fitXY"
                 android:src="@drawable/image_map4"
                 android:layout_weight="1"
@@ -56,7 +56,7 @@
                 android:layout_height="match_parent" />
             <ImageButton
                 android:id="@+id/img_btn_5"
-                android:background="@drawable/custom_image_choice"
+                android:background="@drawable/custom_image_choice2"
                 android:scaleType="fitXY"
                 android:src="@drawable/image_map5"
                 android:layout_weight="1"
@@ -64,7 +64,7 @@
                 android:layout_height="match_parent" />
             <ImageButton
                 android:id="@+id/img_btn_6"
-                android:background="@drawable/custom_image_choice"
+                android:background="@drawable/custom_image_choice2"
                 android:scaleType="fitXY"
                 android:src="@drawable/image_map6"
                 android:layout_weight="1"
@@ -78,7 +78,7 @@
             android:layout_height="0dp">
             <ImageButton
                 android:id="@+id/img_btn_7"
-                android:background="@drawable/custom_image_choice"
+                android:background="@drawable/custom_image_choice2"
                 android:scaleType="fitXY"
                 android:src="@drawable/image_map7"
                 android:layout_weight="1"
@@ -86,7 +86,7 @@
                 android:layout_height="match_parent" />
             <ImageButton
                 android:id="@+id/img_btn_8"
-                android:background="@drawable/custom_image_choice"
+                android:background="@drawable/custom_image_choice2"
                 android:scaleType="fitXY"
                 android:src="@drawable/image_map8"
                 android:layout_weight="1"
@@ -94,7 +94,7 @@
                 android:layout_height="match_parent" />
             <ImageButton
                 android:id="@+id/img_btn_9"
-                android:background="@drawable/custom_image_choice"
+                android:background="@drawable/custom_image_choice2"
                 android:scaleType="fitXY"
                 android:src="@drawable/image_map9"
                 android:layout_weight="1"
@@ -108,7 +108,7 @@
             android:layout_height="0dp">
             <ImageButton
                 android:id="@+id/img_btn_10"
-                android:background="@drawable/custom_image_choice"
+                android:background="@drawable/custom_image_choice2"
                 android:scaleType="fitXY"
                 android:src="@drawable/image_map10"
                 android:layout_weight="1"
@@ -116,7 +116,7 @@
                 android:layout_height="match_parent" />
             <ImageButton
                 android:id="@+id/img_btn_11"
-                android:background="@drawable/custom_image_choice"
+                android:background="@drawable/custom_image_choice2"
                 android:scaleType="fitXY"
                 android:src="@drawable/image_map11"
                 android:layout_weight="1"
@@ -124,7 +124,7 @@
                 android:layout_height="match_parent" />
             <ImageButton
                 android:id="@+id/img_btn_12"
-                android:background="@drawable/custom_image_choice"
+                android:background="@drawable/custom_image_choice2"
                 android:scaleType="fitXY"
                 android:src="@drawable/image_map12"
                 android:layout_weight="1"

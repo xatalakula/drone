@@ -93,9 +93,11 @@ public class StepTwoFrag extends Fragment implements View.OnClickListener{
         }
     }
 
-    private void setFocus(ImageButton unFocus,ImageButton focus) {
-        unFocus.setPressed(false);
-        focus.setPressed(true);
-        this.btnUnfocus = focus;
+    private void setFocus(ImageButton btnUnFocus,ImageButton btnFocus) {
+        btnUnFocus.setBackgroundResource(R.drawable.custom_image_choice2);
+        btnFocus.setBackgroundResource(R.drawable.custom_image_choice);
+        btnUnFocus.setPressed(false);
+        btnFocus.setPressed(true);
+        this.btnUnfocus = btnFocus;
     }
 }
