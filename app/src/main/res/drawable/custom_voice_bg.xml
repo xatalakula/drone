@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">            <!-- Trạng thái bình thường khi không click -->
+        <shape
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:shape="oval">
+
+            <solid
+                android:color="#2bc277" />            <!-- Thiết lập màu nền cho nút -->
+
+            <stroke
+                android:width="0dp"
+                android:color="#2bc277" />
+
+            <corners android:radius="0dp" />
+
+            <padding
+                android:bottom="10dp"
+                android:left="10dp"
+                android:right="10dp"
+                android:top="10dp" />
+        </shape>
+    </item>
+</selector>

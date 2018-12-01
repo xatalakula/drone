@@ -101,6 +101,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginTop="10dp"
@@ -123,6 +125,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginTop="10dp"
@@ -145,8 +149,10 @@
             </LinearLayout>
 
             <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="300dp"
                 android:orientation="vertical"
                 android:weightSum="4">
 
@@ -162,6 +168,7 @@
                     android:textStyle="bold" />
 
                 <ImageView
+                    android:scaleType="fitXY"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="3"
@@ -169,8 +176,10 @@
             </LinearLayout>
 
             <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="300dp"
                 android:orientation="vertical"
                 android:weightSum="4"
                 android:layout_marginBottom="70dp">
