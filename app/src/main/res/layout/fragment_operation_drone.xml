@@ -26,13 +26,13 @@
             android:layout_width="match_parent"
             android:layout_height="0dp">
             <TextView
-                android:text="Kinh do: 100"
+                android:text="Kinh do: 100°22'12''"
                 android:textSize="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <TextView
-                android:text="Vi do: 100"
+                android:text="Vi do: 100°43'65''"
                 android:textSize="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
