@@ -4,9 +4,11 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 
 /**
@@ -26,6 +28,8 @@ public class DashBoardFrag extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    LinearLayout detailNotification;
+    LinearLayout detailWarning;
 
     private OnFragmentInteractionListener mListener;
 
@@ -64,7 +68,24 @@ public class DashBoardFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dash_board, container, false);
+        View view = inflater.inflate(R.layout.fragment_dash_board, container, false);
+        detailNotification = (LinearLayout) view.findViewById(R.id.detail_notification);
+        detailNotification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment notiFrag = new NotificationFrag(1);
+                loadFragMent(notiFrag);
+            }
+        });
+        detailWarning = (LinearLayout) view.findViewById(R.id.detail_warning);
+        detailWarning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment warningFrag = new NotificationFrag(2);
+                loadFragMent(warningFrag);
+            }
+        });
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -104,5 +125,12 @@ public class DashBoardFrag extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    private void loadFragMent(Fragment fragment) {
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }

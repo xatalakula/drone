@@ -101,6 +101,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/detail_notification"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
@@ -119,12 +120,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="Bạn có 5 thông báo."
+                    android:text="Bạn có 4 thông báo."
                     android:textColor="#111"
                     android:textSize="25dp" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/detail_warning"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
