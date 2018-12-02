@@ -1,13 +1,17 @@
 package com.example.noname.ttnm12;
 
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationSet;
 import android.widget.Button;
+import android.widget.ImageView;
 
 
 /**
@@ -15,6 +19,7 @@ import android.widget.Button;
  */
 public class OperationDroneFrag extends Fragment {
     Button btnControl,btnWatchVideo;
+    ImageView dronePos;
 
     public OperationDroneFrag() {
         // Required empty public constructor
@@ -42,7 +47,17 @@ public class OperationDroneFrag extends Fragment {
                 startActivity(intent);
             }
         });
+        dronePos = (ImageView) view.findViewById(R.id.image_drone_position);
+        handleAnimation(view);
         return view;
+    }
+
+    public void handleAnimation(View view) {
+        ObjectAnimator animator = ObjectAnimator.ofFloat(dronePos,"x",650f);
+        animator.setDuration(50000);
+        AnimatorSet animationSet = new AnimatorSet();
+        animationSet.playTogether(animator);
+        animationSet.start();
     }
 
 }

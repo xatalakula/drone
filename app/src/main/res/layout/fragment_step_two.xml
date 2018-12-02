@@ -131,6 +131,13 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent" />
         </LinearLayout>
+        <TextView
+            android:text="(*) Click vào một vị trí trên bản đồ để chọn."
+            android:textSize="15dp"
+            android:layout_margin="5dp"
+            android:textColor="#002cef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </FrameLayout>
