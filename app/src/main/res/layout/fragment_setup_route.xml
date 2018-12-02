@@ -42,14 +42,14 @@
                 android:id="@+id/btn_back_setup"
                 android:layout_gravity="left"
                 android:background="#7bff47"
-                android:text="tro ve"
+                android:text="Trở về"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp" />
             <Button
                 android:id="@+id/btn_next_setup"
                 android:layout_gravity="right"
                 android:background="#7bff47"
-                android:text="tiep tuc"
+                android:text="Tiếp tục"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp" />
         </FrameLayout>

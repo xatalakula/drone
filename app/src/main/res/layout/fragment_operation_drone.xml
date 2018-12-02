@@ -38,13 +38,15 @@
             android:layout_width="match_parent"
             android:layout_height="0dp">
             <TextView
-                android:text="Kinh do: 100°22'12''"
+                android:id="@+id/longitude"
+                android:text="Kinh độ: 100°22'12''"
                 android:textSize="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <TextView
-                android:text="Vi do: 100°43'65''"
+                android:id="@+id/latitude"
+                android:text="Vĩ độ:     100°43'35''"
                 android:textSize="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -55,13 +57,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
                 <TextView
-                    android:text="Quy dao bay :"
+                    android:text="Qũy đạo bay:"
                     android:textSize="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <ImageView
-                    android:src="@drawable/ic_map"
+                    android:src="@drawable/ic_route_1"
                     android:scaleType="fitXY"
                     android:layout_marginLeft="80dp"
                     android:layout_weight="7"
@@ -70,12 +72,12 @@
             </LinearLayout>
             <TextView
                 android:layout_marginTop="10dp"
-                android:text="Thoi gian bat dau: "
+                android:text="Thời gian bắt đầu: 12:00:00"
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
-                android:text="Du kien ket thuc: "
+                android:text="Dự kiến kết thúc:   14:00:00"
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -89,7 +91,7 @@
                 android:layout_height="0dp">
                 <Button
                     android:id="@+id/btn_control"
-                    android:text="Dieu khien"
+                    android:text="Điều khiển"
                     android:layout_marginRight="30dp"
                     android:layout_weight="4"
                     android:layout_width="0dp"
