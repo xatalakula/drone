@@ -254,7 +254,7 @@ public class ConnectionDroneFrag extends Fragment {
                     if(i==1) {
                         searchView.setText("drone_abc");
                     }else {
-                        searchView.setText("drone_ggwp_01");
+                        searchView.setText("drone_ggwp_13");
                     }
                 }
             }

@@ -30,7 +30,13 @@ public class ReportFrag extends Fragment {
                 loadFragment(new UploadVideoFragment());
             }
         });
-
+        buttonError.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new ReportProblemFrag();
+                loadFragment(fragment);
+            }
+        });
 
         return view;
     }

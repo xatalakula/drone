@@ -31,6 +31,7 @@ public class DroneFrag extends Fragment {
     private Button btn_Supervise;
     private Button button_connect_drone;
     private Button button_setup_route;
+    private Button button_live;
 
     private OnFragmentInteractionListener mListener;
 
@@ -99,7 +100,14 @@ public class DroneFrag extends Fragment {
                 loadFragMent(fragment);
             }
         });
-
+        button_live = (Button) view.findViewById(R.id.button_live);
+        button_live.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new WatchLiveFrag();
+                loadFragMent(fragment);
+            }
+        });
 
         return view;
     }
