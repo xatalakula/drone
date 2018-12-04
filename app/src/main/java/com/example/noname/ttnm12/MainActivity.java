@@ -106,10 +106,10 @@ public class MainActivity extends AppCompatActivity implements
 
     private void createNotification() {
         final List<String> contentNoti = new ArrayList<String>();
-        contentNoti.add("Drone ma so drone_ggwp_01 da khoi dong");
-        contentNoti.add("Drone ma so drone_ggwp_02 da khoi dong");
-        contentNoti.add("Drone ma so drone_ggwp_03 da khoi dong");
-        contentNoti.add("Drone ma so drone_ggwp_04 da khoi dong");
+        contentNoti.add("Drone mã số drone_ggwp_01 đã khởi động");
+        contentNoti.add("Drone mã số drone_ggwp_02 đã khởi động");
+        contentNoti.add("Drone mã số drone_ggwp_03 đã khởi động");
+        contentNoti.add("Drone mã số drone_ggwp_04 đã khởi động");
 
         //mNotifyMgr.notify(001,mBuilder.build());
         final Handler handler = new Handler(){

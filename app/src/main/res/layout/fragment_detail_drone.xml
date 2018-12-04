@@ -16,13 +16,13 @@
         android:layout_height="wrap_content">
         <Button
             android:id="@+id/btn_info"
-            android:text="Thong tin"
+            android:text="Thông tin"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <Button
             android:id="@+id/btn_operation"
-            android:text="Hoat dong"
+            android:text="Hoạt động"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />

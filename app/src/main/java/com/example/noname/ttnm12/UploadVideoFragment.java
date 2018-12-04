@@ -69,10 +69,11 @@ public class UploadVideoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String text = filePath.getText().toString();
-                listFileTemp.add( 0 ,new Video(text, "đã gửi"));
+                String re[] = text.split("/");
+                listFileTemp.add( 0 ,new Video(re[re.length-1], "đã gửi"));
                 listFile.setAdapter(new CustomListVideo(listFileTemp,activity));
                 filePath.setText("Địa chỉ File");
-
+                Toast.makeText(getActivity(), "Gửi thành công", Toast.LENGTH_SHORT).show();
                 
             }
         });
@@ -82,8 +83,8 @@ public class UploadVideoFragment extends Fragment {
     private List<Video> getListData() {
         List<Video> list = new ArrayList<>();
 
-        list.add(new Video("storage/video1.mp4","đã gửi"));
-        list.add(new Video("storage/video1.mp4","đã gửi"));
+        list.add(new Video("video1.mp4","đã gửi"));
+        list.add(new Video("video2.mp4","đã gửi"));
 
 
         return list;
@@ -91,9 +92,14 @@ public class UploadVideoFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if( requestCode == 1000 ) {
-            String file = data.getStringExtra(FilePickerActivity.RESULT_FILE_PATH);
-            filePath.setText(file);
+        if( requestCode == 1000  ) {
+            try {
+                String file = data.getStringExtra(FilePickerActivity.RESULT_FILE_PATH);
+                filePath.setText(file);
+
+            }catch (Exception e){
+
+            }
         }
     }
 
