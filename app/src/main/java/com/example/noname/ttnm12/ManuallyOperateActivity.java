@@ -1,6 +1,10 @@
 package com.example.noname.ttnm12;
 
 import android.animation.ObjectAnimator;
+import android.content.Context;
+import android.os.Parcel;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +24,7 @@ public class ManuallyOperateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manually_operate);
+        final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         btnExitOperate = (Button) findViewById(R.id.button_exit_operate);
         btnExitOperate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,8 +39,10 @@ public class ManuallyOperateActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked) {
                     tvMode.setText("Điều khiển");
+                    vibrator.vibrate(500);
                 }else {
                     tvMode.setText("Tự động");
+                    vibrator.vibrate(500);
                 }
             }
         });
