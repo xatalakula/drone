@@ -140,12 +140,12 @@ public class ConnectionDroneFrag extends Fragment {
                     public void onClick(DialogInterface dialog, int which) {
 
                     }
-                })
-                .setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialogSuccess.cancel();
-                    }
                 });
+//                .setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int id) {
+//                        dialogSuccess.cancel();
+//                    }
+//                });
         dialogSuccess = builderSuccess.create();
 
         builderFail.setView(inflater.inflate(R.layout.dialog_fail_connection, null))
@@ -155,12 +155,12 @@ public class ConnectionDroneFrag extends Fragment {
                     public void onClick(DialogInterface dialog, int which) {
 
                     }
-                })
-                .setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialogFail.cancel();
-                    }
                 });
+//                .setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int id) {
+//                        dialogFail.cancel();
+//                    }
+//                });
         dialogFail = builderFail.create();
 
 
@@ -190,12 +190,12 @@ public class ConnectionDroneFrag extends Fragment {
                     public void onClick(DialogInterface dialog, int which) {
 
                     }
-                })
-                .setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
                 });
+//                .setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int id) {
+//                        dialog.cancel();
+//                    }
+//                });
         dialogError = builderError.create();
     }
     private List<Drone> getListData() {

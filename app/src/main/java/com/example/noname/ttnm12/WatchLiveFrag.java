@@ -106,6 +106,7 @@ public class WatchLiveFrag extends Fragment {
         flag = false;
         dialogVoice = new Dialog(getActivity());
         dialogVoice.setContentView(R.layout.custom_dialog_voice);
+        dialogVoice.setCancelable(false);
         dialogVoice.show();
         btnExitVoice = (Button) dialogVoice.findViewById(R.id.btn_exit_voice);
 

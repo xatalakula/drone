@@ -32,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
                 }else {
                     edtPassword.setTransformationMethod(new PasswordTransformationMethod());
                 }
+                edtPassword.setSelection(edtPassword.length());
             }
         });
 

@@ -128,8 +128,8 @@ public class StepThreeFrag extends Fragment {
     private List<Integer> getListRoute() {
         List<Integer> listRoute = new ArrayList<>();
         listRoute.add(R.drawable.ic_route_1);
-        listRoute.add(R.drawable.ic_route_2);
-        listRoute.add(R.drawable.ic_map);
+        listRoute.add(R.drawable.ic_route_3);
+        listRoute.add(R.drawable.ic_route_4);
         return listRoute;
     }
 
@@ -139,10 +139,10 @@ public class StepThreeFrag extends Fragment {
             imageRouteSelected.setImageResource(R.drawable.ic_route_1);
         }
         else if(idRouteSelected == 1) {
-            imageRouteSelected.setImageResource(R.drawable.ic_route_2);
+            imageRouteSelected.setImageResource(R.drawable.ic_route_3);
         }
         else {
-            imageRouteSelected.setImageResource(R.drawable.ic_map);
+            imageRouteSelected.setImageResource(R.drawable.ic_route_4);
         }
     }
 
