@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="3dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_ordinal"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:text="1"
+            android:textSize="22dp"
+            android:textColor="#de1c1c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_coordinate1"
+                android:text="10°11'12'' B"
+                android:textSize="20dp"
+                android:textColor="#111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_coordinate2"
+                android:text="10°11'12'' D"
+                android:textSize="20dp"
+                android:textColor="#111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imageview_level"
+            android:layout_marginLeft="3dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <ImageView
+            android:id="@+id/imageview_checksuccess"
+            android:layout_marginLeft="3dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+    </LinearLayout>
+    <TextView
+        android:background="#111"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+</LinearLayout>

@@ -3,6 +3,7 @@ package com.example.noname.ttnm12;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,19 +16,24 @@ import android.view.ViewGroup;
 import android.view.animation.AnimationSet;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class OperationDroneFrag extends Fragment {
-    Button btnControl,btnWatchVideo;
+    Button btnControl,btnWatchVideo,btnCloseCheckPoint;
     ImageView dronePos;
-    TextView longitude,latitude;
+    TextView longitude,latitude,tvDetailRoute;
     int long1 = 100,long2 = 22,long3 = 12;
     int lat1 = 100,lat2 = 43,lat3 = 35;
     int count = 0;
+    ListView listCheckPoint,listSpecial;
 
     public OperationDroneFrag() {
         // Required empty public constructor
@@ -53,6 +59,13 @@ public class OperationDroneFrag extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),VideoActivity.class);
                 startActivity(intent);
+            }
+        });
+        tvDetailRoute = (TextView) view.findViewById(R.id.tv_detail_route);
+        tvDetailRoute.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialogCheckpoint();
             }
         });
         dronePos = (ImageView) view.findViewById(R.id.image_drone_position);
@@ -125,6 +138,54 @@ public class OperationDroneFrag extends Fragment {
             lat2 = pos2;
             lat3 = pos3;
         }
+    }
+
+    private void showDialogCheckpoint() {
+        final Dialog dialogCheckpoint = new Dialog(getActivity());
+        dialogCheckpoint.setContentView(R.layout.dialog_detail_route);
+        listCheckPoint = (ListView) dialogCheckpoint.findViewById(R.id.list_checkpoint);
+        listSpecial = (ListView) dialogCheckpoint.findViewById(R.id.list_special_checkpoint);
+        btnCloseCheckPoint = (Button) dialogCheckpoint.findViewById(R.id.button_close_checkpoint);
+        btnCloseCheckPoint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogCheckpoint.hide();
+            }
+        });
+        CustomListCheckPoint customListCheckPoint1 = new CustomListCheckPoint(getListCheckPoint(),getActivity());
+        listCheckPoint.setAdapter(customListCheckPoint1);
+        CustomListCheckPoint customListCheckPoint2 = new CustomListCheckPoint(getListSpecial(),getActivity());
+        listSpecial.setAdapter(customListCheckPoint2);
+        dialogCheckpoint.show();
+    }
+
+    private List<CheckPoint> getListCheckPoint() {
+        List<CheckPoint> listCheckPoint = new ArrayList<>();
+        listCheckPoint.add(new CheckPoint("01","10°12'43''","12°14'16''",0,R.drawable.ic_check_success));
+        listCheckPoint.add(new CheckPoint("02","10°22'54''","12°24'26''",0,R.drawable.ic_check_success));
+        listCheckPoint.add(new CheckPoint("03","10°32'11''","12°34'36''",0,R.drawable.ic_check_success));
+        listCheckPoint.add(new CheckPoint("04","10°43'13''","12°44'46''",0,R.drawable.ic_check_success));
+        listCheckPoint.add(new CheckPoint("05","10°54'52''","12°54'56''",0,R.drawable.ic_check_success));
+        listCheckPoint.add(new CheckPoint("06","11°02'32''","13°14'16''",0,R.drawable.ic_check_success));
+        listCheckPoint.add(new CheckPoint("07","12°12'13''","13°24'26''",0,R.drawable.ic_check_fail));
+        listCheckPoint.add(new CheckPoint("08","13°32'22''","13°34'36''",0,R.drawable.ic_check_fail));
+        listCheckPoint.add(new CheckPoint("09","14°13'11''","13°44'46''",0,0));
+        listCheckPoint.add(new CheckPoint("10","15°43'02''","13°54'56''",0,0));
+        listCheckPoint.add(new CheckPoint("11","16°54'43''","14°14'16''",0,0));
+        listCheckPoint.add(new CheckPoint("12","17°22'32''","14°24'26''",0,0));
+        listCheckPoint.add(new CheckPoint("13","18°44'13''","14°34'36''",0,0));
+        return listCheckPoint;
+    }
+
+    private List<CheckPoint> getListSpecial() {
+        List<CheckPoint> listCheckPoint = new ArrayList<>();
+        listCheckPoint.add(new CheckPoint("01","10°15'43''","12°18'16''",R.drawable.ic_flag_level_1,R.drawable.ic_check_success));
+        listCheckPoint.add(new CheckPoint("02","10°25'54''","12°28'26''",R.drawable.ic_flag_level_1,R.drawable.ic_check_success));
+        listCheckPoint.add(new CheckPoint("03","10°35'11''","12°38'36''",R.drawable.ic_flag_level_2,0));
+        listCheckPoint.add(new CheckPoint("04","10°45'13''","12°48'46''",R.drawable.ic_flag_level_1,0));
+        listCheckPoint.add(new CheckPoint("05","10°55'52''","12°58'56''",R.drawable.ic_flag_level_1,0));
+        listCheckPoint.add(new CheckPoint("06","11°65'32''","13°68'16''",R.drawable.ic_flag_level_3,0));
+        return listCheckPoint;
     }
 
 }

@@ -56,16 +56,29 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
-                <TextView
-                    android:text="Qũy đạo bay:"
-                    android:textSize="20dp"
-                    android:layout_marginTop="20dp"
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Qũy đạo bay:"
+                        android:textSize="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_detail_route"
+                        android:text="Chi tiết lộ trình"
+                        android:textSize="20dp"
+                        android:background="#e9e5e5"
+                        android:layout_marginTop="25dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
                 <ImageView
                     android:src="@drawable/ic_route_1"
                     android:scaleType="fitXY"
-                    android:layout_marginLeft="80dp"
+                    android:layout_marginLeft="70dp"
                     android:layout_weight="7"
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
