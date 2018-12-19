@@ -16,6 +16,7 @@ import java.util.List;
 public class ReportFrag extends Fragment {
     private Button buttonReport;
     private Button buttonError;
+    private Button buttonMess;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -23,6 +24,7 @@ public class ReportFrag extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_report, container, false);
         buttonReport = (Button) view.findViewById(R.id.button_upload);
         buttonError = (Button) view.findViewById(R.id.button_sendError);
+        buttonMess = (Button) view.findViewById(R.id.button_sendMess);
 
         buttonReport.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -34,6 +36,14 @@ public class ReportFrag extends Fragment {
             @Override
             public void onClick(View v) {
                 Fragment fragment = new ReportProblemFrag();
+                loadFragment(fragment);
+            }
+        });
+
+        buttonMess.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new MessageFrag();
                 loadFragment(fragment);
             }
         });
